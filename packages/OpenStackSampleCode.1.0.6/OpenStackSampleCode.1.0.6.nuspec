@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>OpenStackSampleCode</id>
+    <version>1.0.6</version>
+    <title>OpenStackSampleCode</title>
+    <authors>Don Schenck</authors>
+    <owners>Don Schenck</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Sample code demonstrating the use of the OpenStack SDK for Microsoft .NET.</description>
+    <releaseNotes>See the readme.txt file included with this package.</releaseNotes>
+    <copyright />
+    <language />
+    <tags>OpenStack open cloud</tags>
+    <dependencies>
+      <dependency id="openstack.net" version="1.3.0.0" />
+    </dependencies>
+  </metadata>
+</package>

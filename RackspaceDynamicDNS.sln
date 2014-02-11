@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RackspaceDynamicDNS", "RackspaceDynamicDNS\RackspaceDynamicDNS.csproj", "{F2408AF1-2292-4D37-812D-8381B82FAD98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RackspaceDNSService", "RackspaceDNSService\RackspaceDNSService.csproj", "{BAE953D0-F2F6-434A-A6E5-9D1C7881E049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDNSConsole", "DynamicDNSConsole\DynamicDNSConsole.csproj", "{992FF499-C79C-42E7-94C5-8E6172DD3E0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2408AF1-2292-4D37-812D-8381B82FAD98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2408AF1-2292-4D37-812D-8381B82FAD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2408AF1-2292-4D37-812D-8381B82FAD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2408AF1-2292-4D37-812D-8381B82FAD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE953D0-F2F6-434A-A6E5-9D1C7881E049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE953D0-F2F6-434A-A6E5-9D1C7881E049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE953D0-F2F6-434A-A6E5-9D1C7881E049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE953D0-F2F6-434A-A6E5-9D1C7881E049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992FF499-C79C-42E7-94C5-8E6172DD3E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992FF499-C79C-42E7-94C5-8E6172DD3E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992FF499-C79C-42E7-94C5-8E6172DD3E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992FF499-C79C-42E7-94C5-8E6172DD3E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
