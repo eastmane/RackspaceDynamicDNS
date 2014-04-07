@@ -21,9 +21,9 @@ namespace DynamicDNSConsole
             {
                 var rsSvc = new RackspaceDNSService.RackspaceDNSService(log);
 
-                rsSvc.Authenticate("***REMOVED***", "***REMOVED***");
+                rsSvc.Authenticate("edeastman", "6ae53bd347fba08ac63f68bbb1b89810");
 
-                rsSvc.UpdateIPAddressForARecord("dm13.co.uk", "***REMOVED***", Utilities.GetPublicIP());
+                rsSvc.UpdateIPAddressForARecord("dm13.co.uk", "home.dm3.co.uk", Utilities.GetPublicIP());
             }
             catch (Exception ex)
             {
