@@ -41,21 +41,21 @@ namespace RackspaceDNSService
             _UserAccess = _IdentityProvider.Authenticate(_NewRackspaceCloudIdentity);
         }
 
-        public DnsDomain GetDomain(string domainName)
+        public async Task<DnsDomain> GetDomain(string domainName)
         {
             var dnsProvider = new net.openstack.Providers.Rackspace.CloudDnsProvider(_NewRackspaceCloudIdentity, "UK", false, _IdentityProvider);
-            var domains = dnsProvider.ListDomainsAsync(domainName, null, null, CancellationToken.None);
+            var domains = await dnsProvider.ListDomainsAsync(domainName, null, null, CancellationToken.None);
 
-            var domain = domains.Result.Item1.FirstOrDefault();
+            var domain = domains.Item1.FirstOrDefault();
 
             if (domain == null)
                 throw new Exception("Domain not found");
             return domain;
         }
 
-        public void UpdateIPAddressForARecord(string domainName, string hostName, string newIP)
+        public async void UpdateIPAddressForARecord(string domainName, string hostName, string newIP)
         {
-            var domain = GetDomain(domainName);
+            var domain = await GetDomain(domainName);
             
             var dnsProvider = new net.openstack.Providers.Rackspace.CloudDnsProvider(_NewRackspaceCloudIdentity, "UK", false, _IdentityProvider);
 
@@ -72,6 +72,10 @@ namespace RackspaceDNSService
 
                 var dnsJob = dnsProvider.UpdateRecordsAsync(domain.Id, configRecord, net.openstack.Core.AsyncCompletionOption.RequestCompleted, CancellationToken.None, null).Result;
                 log.Info("DNS Updated to new IP: " + newIP);
+            }
+            else
+            {
+                log.Debug("DNS Unchanged: " + newIP);
             }
         }
 

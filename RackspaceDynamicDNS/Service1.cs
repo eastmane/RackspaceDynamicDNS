@@ -28,9 +28,13 @@ namespace RackspaceDynamicDNS
 
         protected override void OnStart(string[] args)
         {
-            BasicConfigurator.Configure();
+            XmlConfigurator.Configure();
 
-            updateTimer = new System.Threading.Timer(new TimerCallback(updateDNS), null, 30000, Convert.ToInt32(ConfigurationManager.AppSettings["TimerPeriodInMinutes"]) * 1000 * 60);
+            updateTimer = new System.Threading.Timer(
+                new TimerCallback(updateDNS), null, 30000, 
+                Convert.ToInt32(ConfigurationManager.AppSettings["TimerPeriodInMinutes"]) * 1000 * 60);
+
+            log.Info("RackspaceDynamicDNS Started");
         }
 
         private void updateDNS(object stateInfo)

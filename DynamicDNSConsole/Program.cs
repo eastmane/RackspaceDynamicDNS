@@ -23,7 +23,7 @@ namespace DynamicDNSConsole
 
                 rsSvc.Authenticate("edeastman", "6ae53bd347fba08ac63f68bbb1b89810");
 
-                rsSvc.UpdateIPAddressForARecord("dm13.co.uk", "home.dm3.co.uk", Utilities.GetPublicIP());
+                rsSvc.UpdateIPAddressForARecord("dm3.co.uk", "home.dm3.co.uk", Utilities.GetPublicIP());
             }
             catch (Exception ex)
             {
